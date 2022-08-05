@@ -1,0 +1,32 @@
+# dev-profile
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 5032
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql : true
+    open-in-view: false
+
+logging:
+  level:
+    ROOT: INFO
+    example.springsecurity: DEBUG
+  path: ./
+#    org:
+#      hibernate:
+#        type:
+#          descriptor:
+#            sql: trace
+
+jwt:
+  header: Authorization
+  secret: 4oCYbGVhLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtbmZ0LXNwcmluZy1ib290LWp3dC10dXRvcmlhbOKAmQo=
+  token-validity-in-seconds: 86400
+
